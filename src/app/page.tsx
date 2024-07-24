@@ -27,7 +27,7 @@ export default async function Home() {
         createdAt: Date;
       }[]
     | undefined = await onGetBlogPosts();
-  console.log(posts);
+
   return (
     <main>
       <NavBar />
@@ -112,7 +112,7 @@ export default async function Home() {
           Explore our insights on AI, technology, and optimizing your business.
         </p>
       </section>
-      <section className="md:grid-cols-3 grid-cols-1 grid gap-5 container mt-8">
+      <section className="md:grid-cols-3 grid-cols-1 grid gap-5 container my-8">
         {posts &&
           posts.map((post) => (
             <Link href={`/blogs/${post.id}`} key={post.id}>
@@ -130,7 +130,7 @@ export default async function Home() {
                     {post.createdAt.getDate()} {post.createdAt.getFullYear()}
                   </CardDescription>
                   <CardTitle>{post.title}</CardTitle>
-                  {parse(post.content.slice(4, 100))}...
+                  {/* {parse(post.content.slice(4, 100))}... */}
                 </div>
               </Card>
             </Link>
