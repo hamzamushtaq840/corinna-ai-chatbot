@@ -27,7 +27,7 @@ export default async function Home() {
         createdAt: Date;
       }[]
     | undefined = await onGetBlogPosts();
-
+  console.log(posts);
   return (
     <main>
       <NavBar />
@@ -130,7 +130,7 @@ export default async function Home() {
                     {post.createdAt.getDate()} {post.createdAt.getFullYear()}
                   </CardDescription>
                   <CardTitle>{post.title}</CardTitle>
-                  {/* {parse(post.content.slice(4, 100))}... */}
+                  {/* {parse(post?.content.slice(610, 800))}... */}
                 </div>
               </Card>
             </Link>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/context/them-provider";
 
