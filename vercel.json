@@ -1,0 +1,14 @@
+{
+  "build": {
+    "env": {
+      "DATABASE_URL": "your-database-url-here"
+    }
+  },
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/$1" }]
+}
